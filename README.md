@@ -1,4 +1,4 @@
-# Cookpad OMron Kitchens dataset (COM Kitchens)
+# The COM Kitchens dataset
 
 [![python](https://img.shields.io/badge/-Python_3.9-blue?logo=python&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pytorch](https://img.shields.io/badge/PyTorch_2.0+-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
@@ -34,7 +34,14 @@ This work is done for the internship at OMRON SINIC X.
 ## Citation
 
 > \[!NOTE\]
-> TBA
+> ```
+> @InProceedings{comkitchens_eccv2024,
+>    author    = {Koki Maeda and Tosho Hirasawa and Atsushi Hashimoto and Jun Harashima and Leszek Rybicki and Yusuke Fukasawa and Yoshitaka Ushiku},
+>    title     = {COM Kitchens: An Unedited Overhead-view Video Dataset as a Vision-Language Benchmark},
+>    booktitle = {Proceedings of the European Conference on Computer Vision},
+>    year      = {2024},
+>}
+> ```
 
 ## Dataset Details
 
@@ -101,10 +108,11 @@ data
 | "steps/words"  | `List[str]`  | recipe split word by word           |
 | "steps/ap_ids" | `List[Dict]` | Correspondence between AP and words |
 
-### Download Procedure of COM Kitchens
+### Download Procedure for COM Kitchens
 
 > \[!NOTE\]
-> 申請してアクセスする
+> [Application Form](https://www.nii.ac.jp/dsc/idr/rdata/COM_Kitchens/)
+> English support will be available soon.
 
 ## Quick Start
 
@@ -156,4 +164,4 @@ We have attached dockerfile to `docker/*` for reproducibility.
 
 ## LICENSE
 
-This project is licensed under the *MIT License*, see the LICENSE.txt file for details
+This project (other than the dataset) is licensed under the *MIT License*, see the LICENSE.txt file for details.
