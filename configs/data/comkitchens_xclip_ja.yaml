@@ -1,0 +1,31 @@
+_target_: com_kitchens.data.comkitchens_datamodule.COMKitchensDataModule
+task: retrieval
+dat_files:
+  train: ${paths.recipe_dir}/train.dat
+  validation: ${paths.recipe_dir}/val.dat
+  test: ${paths.recipe_dir}/test.dat
+recipe_dir: ${paths.recipe_dir}
+video_dir:
+  train: ${paths.frame_dir}/train
+  validation: ${paths.frame_dir}/val
+  test: ${paths.frame_dir}/test
+# lang: None
+ap_segment: "end"
+sep: ""
+test_frame_ratios: [0.25, 0.5, 0.75, 1.0]
+max_words: 32
+batch_size: 10
+num_workers: 1
+pin_memory: False
+
+tokenizer:
+  _target_: com_kitchens.data.components.clip_tokenizers.JapaneseCLIPTokenizerFast.from_pretrained
+  pretrained_model_name_or_path: "rinna/japanese-roberta-base"
+  use_fast: True
+
+video_extractor:
+  _target_: com_kitchens.data.components.rgb_extractor.RGBExtractor
+  resolution: 224
+  max_frames: 12
+  frame_slice_pos: 0
+  frame_order: 0

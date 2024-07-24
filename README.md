@@ -138,9 +138,9 @@ data
 
 For UniVL, we are required to extract s3d features of the videos.
 
-1. Download `s3d_howto100m.pth` to `src/preprocess/model` or other path you configure.
+1. Download `s3d_howto100m.pth` to `cache/s3d_howto100m.pth` or other path you configure.
 2. Run `sh scripts/extract_s3d_features.sh` to extract s3d features.
-3. Download pretrained model `univl.pretrained.bin` to `src/models/components/UniVL/weights` or other path you configure.
+3. Download pretrained model `univl.pretrained.bin` to `cache/univl.pretrained.bin` or other path you configure.
 4. Then you can run `sh scripts/onrr-train-univl.sh` to train UniVL models.
 
 ### Dense Video Captioning on unedited fixed-viewpoint videos (DVC-FV)
@@ -150,17 +150,9 @@ For UniVL, we are required to extract s3d features of the videos.
 2. Preprocess
    1. Run `sh scripts/dvc-vid2seq-prep` to extract 
 3. Training & Evaluation
-   1. Run `sh scripts/dvc-pdvc.sh` to train and evaluate a PDVC model
-   2. Run `sh scripts/vid2seq-zs.sh` to evaluate a pre-trained vid2seq model
+   1. Run `sh scripts/vid2seq-zs.sh` to evaluate a pre-trained vid2seq model
    2. Run `sh scripts/vid2seq-ft.sh` to fine-tune and evaluate a vid2seq model
-
-## Environment
-
-We have attached dockerfile to `docker/*` for reproducibility.
-
-> \[!NOTE\]
-> The training process requires 4 GPUs of 16GB RAM.
-> The evaluation process needs 1 GPU.
+   3. RUn `sh scripts/vid2seq-ft-rl-as.sh` to fine-tune and evaluate a vid2seq model incorporating action graph as both relation labels and attention supervision (*RL+AS*)
 
 ## LICENSE
 

@@ -1,0 +1,14 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /data: comkitchens.yaml
+  - override /model: dvc.yaml
+  - override /callbacks: dvc.yaml
+  - override /trainer: ddp.yaml
+
+task_name: "dvc"
+
+tags: ["com_kitchens"]

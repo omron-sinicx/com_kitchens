@@ -1,0 +1,15 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /data: comkitchens_univl_en.yaml
+  - override /model: univl.yaml
+  - override /callbacks: univl.yaml
+  - override /trainer: ddp.yaml
+
+task_name: "univl_en"
+
+trainer:
+  devices: 4

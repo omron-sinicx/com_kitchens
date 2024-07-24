@@ -1,0 +1,12 @@
+[submodule "submodules/UniVL"]
+	path = submodules/UniVL
+	url = git@github.com:microsoft/UniVL.git
+[submodule "submodules/CLIP4Clip"]
+	path = submodules/CLIP4Clip
+	url = git@github.com:ArrowLuo/CLIP4Clip.git
+[submodule "submodules/X-CLIP"]
+	path = submodules/X-CLIP
+	url = git@github.com:xuguohai/X-CLIP.git
+[submodule "submodules/video_feature_extractor"]
+	path = submodules/video_feature_extractor
+	url = git@github.com:antoine77340/video_feature_extractor.git

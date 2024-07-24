@@ -1,0 +1,15 @@
+# @package _global_
+
+# to execute this experiment run:
+# python train.py experiment=example
+
+defaults:
+  - override /data: comkitchens_xclip_en.yaml
+  - override /model: xclip.yaml
+  - override /callbacks: xclip.yaml
+  - override /trainer: ddp.yaml
+
+task_name: "xclip_en"
+
+trainer:
+  devices: 4

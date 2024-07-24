@@ -1,0 +1,16 @@
+hydra-core==1.3.2
+lightning==2.0.5
+hydra-colorlog==1.2.0
+ffmpeg==1.4
+ffmpeg-python==0.2.0
+pyrootutils==1.0.4
+transformers==4.31.0
+datasets==2.14.3
+Pillow==10.0.0
+--extra-index-url https://download.pytorch.org/whl/cu113
+torch==1.12.1+cu113
+torchvision==0.13.1+cu113
+torchaudio==0.12.1+cu113
+# avoid "Loading a dataset cached in a LocalFileSystem is not supported." error
+fsspec==2023.6.0
+numpy==1.26.4

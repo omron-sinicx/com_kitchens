@@ -1,0 +1,71 @@
+_target_: com_kitchens.models.univl_module.UniVLLitModule
+
+model_state_dict: null
+task_config:
+  # training
+  do_pretrain: false
+  do_train: true
+  do_eval: true
+
+  # data is written to comkitchens_dataloader
+  # None
+
+  # hyperparameters
+  num_thread_reader: 1
+  lr: 1e-4
+  epochs: 20
+  batch_size: 32
+  batch_size_val: 64
+  lr_decay: 0.9
+  video_dim: 1024
+  seed: 42
+  max_words: 48
+  max_frames: 48
+  feature_framerate: 1
+  margin: 0.1
+  hard_negative_rate: 0.5
+  negative_weighting: 1
+  n_pair: 1
+  weight_decay: 0.01
+
+  # directories
+  output_dir: "results_univl"
+  bert_model: "bert-base-uncased"
+  cross_model: "cross-base"
+  decoder_model: "decoder-base"
+  visual_model: "visual-base"
+  init_model: "${paths.root_dir}/cache/univl.pretrained.bin"
+  do_lower_case: true
+  warmup_proportion: 0.1
+  gradient_accumulation_steps: 1
+  n_gpu: ${trainer.devices}
+
+  # cache_dir
+  cache_dir: ""
+
+  # fp16
+  fp16: false
+  fp16_opt_level: "O1"
+
+  # task/data
+  task_type: retrieval
+  datatype: comkitchens
+
+  # distributed
+  world_size: 4
+  local_rank: 0
+  coef_lr: 0.1
+  use_mil: false
+  sampled_use_mil: false
+
+  # num hidden layers
+  text_num_hidden_layers: 12
+  visual_num_hidden_layers: 6
+  cross_num_hidden_layers: 2
+  decoder_num_hidden_layers: 3
+
+  # other
+  train_sim_after_cross: false
+  expand_msrvtt_sentences: false
+  train_data_size: 699
+  stage: early

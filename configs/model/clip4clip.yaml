@@ -1,0 +1,46 @@
+_target_: com_kitchens.models.clip4clip_module.CLIP4clipLitModule
+cross_config: cross-base
+clip_state_dict: null
+task_config:
+  do_pretrain: false
+  do_train: true
+  do_eval: true
+  num_thread_reader: 1
+  epochs: 5
+  lr: 1e-4
+  batch_size: ${data.batch_size}
+  batch_size_val: ${data.batch_size}
+  lr_decay: 0.9
+  n_display: 50
+  video_dim: 1024
+  seed: 42
+  max_words: 32
+  max_frames: 12
+  feature_framerate: 1
+  margin: 0.1
+  hard_negative_rate: 0.5
+  n_pair: 1
+  gradient_accumulation_steps: 1
+  local_rank: 0
+  rank: 0
+  n_gpu: ${trainer.devices}
+  world_size: 4
+  warmup_proportion: 0.1
+  task_type: retrieval
+  datatype: comkitchens
+  train_data_size: 699
+  coef_lr: 1e-3
+  text_num_hidden_layers: 12
+  visual_num_hidden_layers: 12
+  cross_num_hidden_layers: 4
+  loose_type: true
+  train_frame_order: 0
+  eval_frame_order: 0
+  freeze_layer_num: 0
+  slice_framepos: 2
+  linear_patch: 2d
+  sim_header: seqTransf
+
+  pretrained_clip_name: ViT-B/16
+  cache_dir: ""
+  stage: early
