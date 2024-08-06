@@ -1,4 +1,4 @@
-# The COM Kitchens dataset
+# [The COM Kitchens dataset](https://arxiv.org/abs/2408.02272)
 
 [![python](https://img.shields.io/badge/-Python_3.9-blue?logo=python&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pytorch](https://img.shields.io/badge/PyTorch_2.0+-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
@@ -42,6 +42,8 @@ This work is done for the internship at OMRON SINIC X.
 >    year      = {2024},
 >}
 > ```
+
+[Link to arXiv](https://arxiv.org/abs/2408.02272)
 
 ## Dataset Details
 
