@@ -24,7 +24,7 @@
 Koki Maeda(3,1)\*, Tosho Hirasawa(4,1)\*, Atsushi Hashimoto(1), Jun Harashima(2), Leszek Rybicki(2), Yusuke Fukasawa(2), Yoshitaka Ushiku(1)
 
 (1) OMRON SINIC X Corp.
-(2) COOKPAD Inc.
+(2) Cookpad Inc.
 (3) Tokyo Institute of Technology
 (4) Tokyo Metropolitan University
 
